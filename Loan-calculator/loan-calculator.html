@@ -136,6 +136,7 @@
                 localStorage.loan_zipcode = zipcode;
 
             }
+        };
 
             // Automatically attempt to restore input fields when the document first loads.
             window.onload = function() {
@@ -145,8 +146,20 @@
                     document.getElementById("years").value = localStorage.loan_years;
                     document.getElementById("zipcode").value = localStorage.loan_zipcode;
                 }
+            };
+
+            function getLenders(amount, apr, years, zipcode) {
+                if (!window.XMLHttpRequest)
+                    return;
+                var ad = document.getElementById("lenders");
+                if (!ad)
+                return;
             }
-         }
+
+            function chart(principal, interest, monthly, payments) {
+                var graph = document.getElementById("graph");
+                graph.width = graph.width;
+            }
 
     </script>
 
